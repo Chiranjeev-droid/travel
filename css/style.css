@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Conmmon Classes */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway';
+    font-weight: 600;
+
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+a{
+    font-family: "Raleway";
+    font-weight: 600;
+}
+
+.img-responsive{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+i.fa.fa-arrow-up{
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background-color: #00a8c5;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+}
+div#toggle-btn{
+    display: none;
+}
+/* header */
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    /* background-color: red; */
+}
+.menu-par{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-par h2{
+    color:#fff;
+    font-size: 40px;
+}
+
+.nav ul li{
+    display: inline-block;
+}
+.nav ul li a:before{
+    content: "s";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: #fff;
+    width: 0%;
+    height: 2px;
+    font-size: 0px;
+    transition: all 0.5s ease;
+}
+.nav ul li a:hover:before{
+    width: 74%;
+}
+.nav ul li a{
+    color:#fff;
+    padding: 10px;
+    position: relative;
+
+}
+/* navigation-fixed */
+.nav-fixed{
+    background-color: #fff;
+    box-shadow: 2px 2px 10px #bbb;
+}
+.nav-fixed .menu-par{
+    padding: 10px 0px;
+}
+
+.nav-fixed h2{
+    color: #00a8b4;
+}
+.nav-fixed ul li a{
+    color: #00a8b4;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 200px;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: overlay;
+}
+
+/* video css */
+.video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+video#video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu-par{
+    padding: 30px 0px;
+}
+.header-info-par a{
+    background-color: #fff;
+    color: #00a8b4;
+    padding: 17px 45px;
+    display: inline-block;
+    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-info-par a:after{
+    content: "Read More";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #00a8b4;
+    color: #fff;
+    width: 0%;
+    height: 100%;
+    line-height: 50px;
+    transition: all 0.5s ease;
+}
+.header-info-par a:hover:after{
+    width: 100%;
+}
+.header-info-par h1{
+    font-size: 45px;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    letter-spacing: 4px;
+}
+.header-info-par p{
+    line-height: 30px;
+    font-size: 15px;
+    width: 80%;
+    margin: auto;
+}
+
+/* Welcome-text section */
+section#welcome-text h2{
+    color: #343a40;
+    font-size: 45px;
+    padding-bottom: 12px;
+}
+section#welcome-text{
+    text-align: center;
+    padding:100px 0px;
+}
+section#welcome-text p{
+    color: #777;
+    text-align: center;
+    font-size: 16px;
+}
+/* Slides Section */
+.slides{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.slide_1{
+    /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/recipe_slides/recipe1.jpg); */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60px;
+    min-width: 60px;
+    height: 300px;
+    border-radius: 40px;
+    margin: 0 15px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.slide_1:hover{
+    min-width: 250px;
+}
+.slide_1:hover .slide-info{
+    transform: rotate(0deg);
+    font-size: 22px;
+    left: 20px;
+    bottom: 20px;
+}
+.slide-info{
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    color: #fff;
+    transform: rotate(-90deg);
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+.slide_2{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/recipe_slides/recipe1.jpg);
+}
+.slide_3{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/recipe_slides/recipe2.jpg);
+}
+.slide_4{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/recipe_slides/recipe3.jpg);
+}
+.slide_5{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/recipe_slides/recipe4.jpg);
+}
+.slide_6{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/recipe_slides/recipe5.jpg);
+}
+.slide_7{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/recipe_slides/recipe6.jpg);
+}
+.slide_8{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/recipe_slides/recipe7.jpg);
+}
+/* book section */
+#book{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/explore-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px;
+    color: #fff;
+}
+.book-content-par{
+    display: flex;
+}
+.book-counter{
+    flex: 1;
+}
+.book-form{
+    flex: 1;
+}
+.book-counter h3{
+    font-size: 100px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+div#clockdiv{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+}
+div#clockdiv > div{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding:10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 30px #fff ;
+    margin-right: 20px;
+}
+.smalltext{
+    font-size: 25px;
+    padding-top: 5px;
+}
+div#clockdiv span{
+    padding:15px;
+    border-radius: 3px;
+    display: inline-block;
+}
+input[type="text"]:focus, select:focus, textarea:focus{
+    border:2px solid #00a8b4;
+    outline: none;
+}
+input[type="text"], select, textarea{
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: #00a8c5;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+input[type="submit"]:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+input[type="submit"]{
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    width: 100%;
+    border: 1px solid #fff;
+    padding:12px 0px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+/* Gallery Section */
+section#gallery{
+    margin: 100px 0px;
+}
+.gallery-item img{
+    width: 360px;
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+.filter-gal-par{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.gallery-item img:hover{
+    transform: scale(1.1,1.1);
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
+}
+.gallery-item{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+button.filter-button{
+    background-color: #00a8c5;
+    color: #fff;
+    border: 1px solid #00a8c5;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    
+}
+button.filter-button:focus{
+    background-color: #fff;
+    color: #00a8c5;
+    outline: none;
+}
+/* Water - Slider */
+#water-slider{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/holyday-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px;
+    color: #fff;
+    text-align: center;
+} 
+
+#water-slider h3{
+    font-size: 40px;
+}
+.owl-carousel{
+    display: block !important;
+}
+.owl-img-par{
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+}
+.owl-img-info{
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+}
+.owl-img-info h3{
+    font-size: 22px !important;
+    padding-bottom: 10px;
+}
+.owl-carousel .owl-item img{
+    display: block;
+    width: 100%;
+    filter: brightness(0.5);
+    transition: all 0.5s ease;
+}
+.owl-carousel .owl-item img:hover{
+    transform: scale(1.1,1.1);
+}
+/* Blog Section */
+section#blog h3{
+    text-align: center;
+}
+section#blog{
+    margin: 100px 0px;
+    font-size: 40px;
+}
+.blog-par{
+    display: flex;
+    margin: 50px 0px;
+}
+.blog-content{
+    display: flex;
+    align-items: center;
+}
+.blog-info-par ul li{
+    display: inline-block;
+    font-size: 13px;
+    color: #999;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.blog-info-par{
+    margin-left: 30px;
+}
+.blog-img-par img{
+    width: 300px;
+    height: 140px;
+}
+
+.blog-info-par h4{
+    color: #00a8c5;
+    font-size: 20px;
+    margin: 5px 0px;
+}
+.blog-info-par p{
+    color: #777;
+    line-height: 23px;
+    font-size: 14px;
+}
+/* .blog-img-par:before{
+    content: "24 March";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    background-color: #00a8c5;
+    padding: 10px;
+}
+.blog-img-par{
+    position: relative;
+} */
+
+/* Footer  */
+
+footer{
+    border-top: 3px solid #00a8c5;
+}
+.footer-par{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px;
+}
+.footer-logo-h{
+    font-size: 30px;
+    color: #00a8c5;
+}
+.footer-1.footer-info h3{
+    color: #333;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.footer-1.footer-info ul li a{
+    color: #333;
+    padding-bottom: 13px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+.footer-1.footer-info ul li a:hover{
+    padding-left: 5px;
+}
+p.copyright{
+    background-color: #00a8c5;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+/* media queries */
+@media screen and (max-width: 768px) {
+    div#toggle-btn{
+        color: #fff;
+        display: block;
+        z-index: 1;
+
+    }
+    .nav{
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        transition: all 0.5s ease;
+    }
+    .nav-active{
+        left: 0;
+    }
+    #toggle-btn i.nav-active:before{
+        content: "\f00d";
+    }
+
+    .nav ul li{
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    }
+
+    .nav ul{
+        margin-top: 100px;
+    }
+    .header-info-par h1{
+        font-size: 20px;
+    }
+    header{
+        padding: 0 40px;
+    }
+    .header-info-par p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    section#welcome-text h2{
+        font-size: 26px;
+    }
+    section#welcome-text p{
+        font-size: 14px;
+        line-height: 25px;
+    }
+    section#welcome-text{
+        padding: 40px 0px;
+    }
+    .slides{
+        flex-direction: column;
+    }
+    .slide_1{
+        width: 90%;
+        min-width: 90%;
+        height: 240px;
+        margin: 20px 15px;
+    }
+    section#book{
+        padding: 50px 0px;
+    }
+    .book-content-par{
+        flex-direction: column;
+    }
+    .book-counter h3{
+        font-size: 40px;
+        text-align: center;
+    }
+    div#clockdiv{
+        font-size: 18px;
+    }
+    div#clockdiv > div{
+        margin-right: 14px;
+    }
+    .smalltext{
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .book-counter{
+        margin: 0 auto;
+    }
+    .book-form{
+        margin-top: 20px;
+    }
+    section#gallery{
+        margin: 30px 0px;
+    }
+    section#water-slider{
+        padding: 50px 0px;
+    }    
+    #water-slider h3{
+        font-size: 23px;
+        margin-bottom: 8px;
+    }
+    section#blog{
+        padding: 40px 0px;
+    }
+    section#blog h3{
+        font-size: 25px;
+    }
+    .blog-par{
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+    .blog-content{
+        margin: 10px 0px;
+    }
+    .blog-info-par h4{
+        font-size: 16px;
+    }
+    .blog-info-par p{
+        font-size: 13px;
+    }
+    .footer-par{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-1.footer-info h3{
+        font-size: 20px;
+        margin-bottom: 18px;
+        margin-top: 15px;
+    }
+    p.copyright{
+        padding: 12px 0px;
+        font-size: 14px;
+    }
+}
